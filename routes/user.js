@@ -9,4 +9,16 @@ router.get("/", function(req, res, next) {
   })
 });
 
+router.get("/:id", function(req, res, next) {
+  queries.getOne(req.params.id).then(function(users) {
+    res.json(users);
+  })
+});
+
+router.get("/:email", function(req, res, next) {
+  queries.getOne(req.params.email).then(function(users) {
+    res.json(users);
+  })
+});
+
 module.exports = router;
