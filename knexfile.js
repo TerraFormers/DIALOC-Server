@@ -9,7 +9,7 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: "postgresql://localhost/dialoc_test_db"
+    connection: process.env.DATABASE_URL
   }
 
 };
